@@ -28,6 +28,7 @@ public class CustomImmutableQueueTests {
 
     @Test
     public void longQueueTest() {
+        // TODO: fix outOfMemoryError
         List<String> items = IntStream.range(0, 100000).boxed().map(value -> String.valueOf(value))
                 .collect(Collectors.toList());
         ImmutableQueue queue = new CustomImmutableQueue(items);
